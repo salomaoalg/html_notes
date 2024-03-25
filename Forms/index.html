@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>Formularios</h1>
+    <h2>Exemplos de Formulários / Radio and Label</h2>
+    <form action="">
+        <fieldset> <!-- é uma maneira conveniente de criar grupos de widgets-->
+            <legend> Venda de frutas Tamanhos</legend> <!--Como se fosse parte da etiqueta de cada widget-->
+            <p>
+                <input type="radio" name="size" id="size1" value="Small">
+                <label for="size1">Small</label>
+            </p>
+            <p>
+                <input type="radio" name="size" id="size2" value="medium">
+                <label for="size2">Medium</label>
+            </p>
+            <p>
+                <input type="radio" name="size" id="size3" value="large">
+                <label for="size3">Large</label>
+            </p>
+        </fieldset>
+    </form>
+    <h2>Label também é clicavél / Checkbox</h2>
+    <form>
+        <fieldset>
+            <p>
+                <label for="taste_1">I like cherry</label>
+                <input type="checkbox" id="taste_1" name="taste_cherry" value="1">
+            </p>
+            <p>
+                <label for="taste_2">I like banana</label>
+                <input type="checkbox" id="taste_2" name="taste_banana" value="2">
+            </p>
+        </fieldset>
+    </form>
+    <section>
+        <h2>Informações de Contato / Radio Lista</h2>
+        <fieldset>
+            <legend>Info</legend>
+            <ul>
+                <li>
+                    <label for="title1">
+                        <input type="radio" id="title1" name="title" value="M.">
+                        Mister
+                    </label>
+                </li>
+                <li>
+                    <label for="title2">
+                        <input type="radio" id="title2" name="title" value="Ms.">
+                        Miss
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+        <h2>Caixa de texto</h2>
+        <fieldset>
+            <p>
+                <label for="name">
+                    <span>Name: </span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" id="name" name="username" />
+            </p>
+            <p>
+                <label for="mail">
+                    <span>Email: </span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="email" id="mail" name="usermail" />
+            </p>
+            <p>
+                <label for="pwd">
+                    <span>Password: </span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="password" id="pwd" name="password" />
+            </p>
+        </fieldset>
+    </section>
+    <h2>Selecionando Opções de Entrada como datas</h2>
+    <section>
+        <fieldset>
+            <h2>Formas de Pagamento</h2>
+            <p>
+                <label for="card">
+                    <span>Tipo de Cartão: </span>
+                </label>
+                <select name="usercard" id="card">
+                    <option value="Visa">Visa</option>
+                    <option value="Master">MasterCard</option>
+                    <option value="American">American Express</option>
+                </select>
+            </p>
+            <p>
+                <label for="number">
+                    <span>Numero do Cartão</span>
+                    <strong><abbr title="required"></abbr>*</strong>
+                </label>
+                <input type="number" id="number" name="cardnumber"/>
+            </p>
+            <p>
+                <label for="date">
+                    <span>Expiration date: </span>
+                    <strong><abbr title="required"></abbr>*</strong>
+                    <em>Formtado da data: dd / mm / yyyy</em>
+                </label>
+                <input type="date" id="date" name="expiration"/>
+            </p>
+
+            <p><button type="submit">Realizar pagamento</button></p>
+        </fieldset>
+    </section>
+</body>
+
+</html>
